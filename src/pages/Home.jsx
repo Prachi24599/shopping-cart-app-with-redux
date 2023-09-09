@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Spinner from "../components/Spinner";
+import Product from "../components/Product";
 
 const Home = () => {
   const API_URL = "https://fakestoreapi.com/products";
@@ -22,7 +24,23 @@ const Home = () => {
     fetchProductData();
   }, []);
 
-  return <div>This is Home Page</div>;
+  return (
+    <div>
+      {loading ? (
+        <Spinner />
+      ) : posts.length > 0 ? (
+        <div>
+          {posts.map((post) => (
+            <Product key={post.id} post={post} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <p>No Data Found!</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Home;
