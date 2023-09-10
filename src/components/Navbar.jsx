@@ -10,12 +10,12 @@ const Navbar = () => {
         </div>
       </NavLink>
       <div>
-        <NavLink>
+        <NavLink to="/">
           <div>
             <p>Home</p>
           </div>
         </NavLink>
-        <NavLink>
+        <NavLink to="/cart">
           <div>
             <FaShoppingCart />
           </div>
