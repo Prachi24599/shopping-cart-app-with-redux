@@ -12,24 +12,36 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       {cart.length > 0 ? (
-        <div>
+        <div className="flex">
           <div>
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
           <div>
-            <div>Your Cart</div>
-            <div>Summary</div>
-            <p>
-              <span>Total Items : {cart.length}</span>
-            </p>
-          </div>
-          <div>
-            <p>Total Amount : {totalAmount}</p>
-            <button>Checkout Now</button>
+            <div>
+              <div className="text-xl text-green-700 font-semibold uppercase ">
+                Your Cart
+              </div>
+              <div className="text-5xl font-semibold text-green-700 uppercase">
+                Summary
+              </div>
+              <p>
+                <span className="text-gray-700 font-semibold text-lg">
+                  Total Items : {cart.length}
+                </span>
+              </p>
+            </div>
+            <div>
+              <p className="text-gray-700 font-semibold text-lg">
+                Total Amount :<span className="font-bold"> ${totalAmount}</span>
+              </p>
+              <button className="w-full bg-green-700 text-xl px-4 text-white font-bold rounded-md">
+                Checkout Now
+              </button>
+            </div>
           </div>
         </div>
       ) : (
