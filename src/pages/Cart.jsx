@@ -4,7 +4,7 @@ import CartItem from "../components/CartItem";
 import { useEffect, useState } from "react";
 
 const Cart = () => {
-  const { cart } = useSelector((state) => state.cart.items);
+  const { cart } = useSelector((state) => state);
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
