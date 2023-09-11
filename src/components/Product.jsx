@@ -23,10 +23,12 @@ const Product = ({ post }) => {
         </p>
       </div>
       <div>
-        <p>{post.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
+        <p className="w-40 text-gray-400 font-normal text-[10px] text-left">
+          {post.description.split(" ").slice(0, 10).join(" ") + "..."}
+        </p>
       </div>
-      <div>
-        <img src={post.image} alt="product_img" />
+      <div className="h-[180px]">
+        <img src={post.image} alt="product_img" className="w-full h-full" />
       </div>
       <div>
         <p>{post.price}</p>
