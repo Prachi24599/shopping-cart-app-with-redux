@@ -1,12 +1,12 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 const Navbar = () => {
   return (
     <div className="flex flex-row justify-between">
       <NavLink to="/">
         <div>
-          <img src="#" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
       </NavLink>
       <div>
