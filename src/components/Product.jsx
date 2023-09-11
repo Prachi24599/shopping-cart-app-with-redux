@@ -16,7 +16,7 @@ const Product = ({ post }) => {
     toast.error("Item removed from Cart");
   };
   return (
-    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in gap-2 p-4 mt-10 ml-5 rounded-xl outline">
+    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in gap-2 p-4 mt-10 my-5 rounded-xl border">
       <div>
         <p className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">
           {post.title}
