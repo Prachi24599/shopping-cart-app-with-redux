@@ -3,7 +3,9 @@ import "./Spinner.css";
 
 const Spinner = () => {
   return (
-    <div className="spinner w-full max-h-full flex justify-center items-center"></div>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className="spinner"></div>
+    </div>
   );
 };
 
