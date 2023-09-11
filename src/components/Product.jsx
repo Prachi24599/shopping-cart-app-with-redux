@@ -15,8 +15,9 @@ const Product = ({ post }) => {
     dispatch(remove(post.id));
     toast.error("Item removed from Cart");
   };
+
   return (
-    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in gap-2 p-4 mt-10 my-5 rounded-xl border">
+    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in gap-2 p-4 mt-10 ml-5 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]">
       <div>
         <p className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">
           {post.title}
@@ -30,7 +31,7 @@ const Product = ({ post }) => {
       <div className="h-[180px]">
         <img src={post.image} alt="product_img" className="w-full h-full" />
       </div>
-      <div className="flex justify-between items-center gap-12">
+      <div className="flex justify-between items-center gap-12 mt-7">
         <div>
           <p className="text-green-600 font-semibold">${post.price}</p>
         </div>
