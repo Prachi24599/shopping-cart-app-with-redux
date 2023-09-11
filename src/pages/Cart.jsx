@@ -33,10 +33,14 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div>
-          <h1>Your cart is empty!</h1>
+        <div className="h-screen flex justify-center items-center flex-col">
+          <h1 className="text-gray-700 font-semibold text-2xl mb-6">
+            Your cart is empty!
+          </h1>
           <Link to={"/"}>
-            <button>Shop Now</button>
+            <button className="uppercase text-white font-semibold px-8 py-4 border-2 rounded-md hover:bg-white  hover:border-green-700 hover:text-green-700  bg-green-600 transition-all ease-in duration-300">
+              Shop Now
+            </button>
           </Link>
         </div>
       )}
