@@ -9,15 +9,16 @@ const CartItem = ({ item, itemIndex }) => {
     dispatch(remove(item.id));
     toast.error("Item Removed");
   };
+
   return (
-    <div>
+    <div className="flex">
       <div>
-        <img src={item.image} alt="" />
+        <img src={item.image} alt="" className="h-[180px]" />
       </div>
       <div>
-        <h1>{item.title}</h1>
-        <h2>{item.description}</h2>
-        <div>
+        <h1 className="text-gray-700 font-semibold text-xl">{item.title}</h1>
+        <h2> {item.description.split(" ").slice(0, 15).join(" ") + "..."}</h2>
+        <div className="flex justify-between">
           <p>{item.price}</p>
           <div onClick={removeFromCart}>
             <AiFillDelete />
