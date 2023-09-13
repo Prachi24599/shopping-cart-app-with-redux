@@ -19,9 +19,12 @@ const CartItem = ({ item, itemIndex }) => {
         <h1 className="text-gray-700 font-semibold text-xl">{item.title}</h1>
         <h2> {item.description.split(" ").slice(0, 15).join(" ") + "..."}</h2>
         <div className="flex justify-between">
-          <p>{item.price}</p>
-          <div onClick={removeFromCart}>
-            <AiFillDelete />
+          <p className="text-green-700 font-semibold">${item.price}</p>
+          <div
+            onClick={removeFromCart}
+            className="cursor-pointer w-9 h-9 bg-red-300 flex justify-center items-center rounded-full"
+          >
+            <AiFillDelete className="text-red-900" />
           </div>
         </div>
       </div>
