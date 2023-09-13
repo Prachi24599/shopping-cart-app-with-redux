@@ -11,15 +11,15 @@ const CartItem = ({ item, itemIndex }) => {
   };
 
   return (
-    <div className="flex">
-      <div>
+    <div className="flex justify-between">
+      <div className="w-[30%]">
         <img src={item.image} alt="" className="h-[180px]" />
       </div>
-      <div>
+      <div className="w-[70%] flex flex-col justify-evenly">
         <h1 className="text-gray-700 font-semibold text-xl">{item.title}</h1>
         <h2> {item.description.split(" ").slice(0, 15).join(" ") + "..."}</h2>
         <div className="flex justify-between">
-          <p className="text-green-700 font-semibold">${item.price}</p>
+          <p className="text-green-700 font-semibold text-lg">${item.price}</p>
           <div
             onClick={removeFromCart}
             className="cursor-pointer w-9 h-9 bg-red-300 flex justify-center items-center rounded-full"
