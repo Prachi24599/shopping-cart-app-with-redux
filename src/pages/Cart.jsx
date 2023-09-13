@@ -15,7 +15,7 @@ const Cart = () => {
     <div className="max-w-6xl mx-auto mt-16">
       {cart.length > 0 ? (
         <div className="flex justify-between gap-14">
-          <div className="w-[60%]">
+          <div className="w-[60%] flex flex-col gap-14">
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
