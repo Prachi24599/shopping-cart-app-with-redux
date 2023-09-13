@@ -12,7 +12,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="max-w-6xl mx-auto mt-16">
+    <div className="max-w-6xl mx-auto mt-16 mb-20">
       {cart.length > 0 ? (
         <div className="flex justify-between gap-14">
           <div className="w-[60%] flex flex-col gap-14">
@@ -20,8 +20,8 @@ const Cart = () => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
-          <div className="w-[40%]">
-            <div>
+          <div className="w-[40%] flex flex-col justify-between">
+            <div className="flex flex-col gap-4">
               <div className="text-xl text-green-700 font-semibold uppercase ">
                 Your Cart
               </div>
@@ -29,16 +29,16 @@ const Cart = () => {
                 Summary
               </div>
               <p>
-                <span className="text-gray-700 font-semibold text-lg">
+                <span className="text-gray-700 font-semibold text-xl">
                   Total Items : {cart.length}
                 </span>
               </p>
             </div>
-            <div>
-              <p className="text-gray-700 font-semibold text-lg">
+            <div className="flex flex-col gap-4">
+              <p className="text-gray-700 font-semibold text-xl">
                 Total Amount :<span className="font-bold"> ${totalAmount}</span>
               </p>
-              <button className="w-full bg-green-700 text-xl px-4 text-white font-bold rounded-md">
+              <button className="w-full bg-green-700 text-xl px-4 py-4 text-white font-bold rounded-md">
                 Checkout Now
               </button>
             </div>
